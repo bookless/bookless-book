@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The Bookless manual</h1>
+<p class="author">PlainLab</p>
+<p class="date">2022</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#the-bookless-book">The Bookless book</a></li>
+<li><a href="#preface"><span class="toc-section-number">1</span>
+Preface</a></li>
+<li><a href="#introduction"><span class="toc-section-number">2</span>
+Introduction</a>
+<ul>
+<li><a href="#motivation"><span class="toc-section-number">2.1</span>
+Motivation</a></li>
+<li><a href="#get-started"><span class="toc-section-number">2.2</span>
+Get started</a></li>
+<li><a href="#usage"><span class="toc-section-number">2.3</span>
+Usage</a></li>
+</ul></li>
+<li><a href="#components"><span class="toc-section-number">3</span>
+Components</a>
+<ul>
+<li><a href="#markdown-syntax"><span
+class="toc-section-number">3.1</span> Markdown syntax</a></li>
+<li><a href="#markdown-extensions"><span
+class="toc-section-number">3.2</span> Markdown extensions</a></li>
+<li><a href="#code-blocks"><span class="toc-section-number">3.3</span>
+Code blocks</a></li>
+<li><a href="#figures"><span class="toc-section-number">3.4</span>
+Figures</a></li>
+<li><a href="#tables"><span class="toc-section-number">3.5</span>
+Tables</a></li>
+<li><a href="#cross-references"><span
+class="toc-section-number">3.6</span> Cross-references</a></li>
+<li><a href="#citations"><span class="toc-section-number">3.7</span>
+Citations</a></li>
+<li><a href="#index"><span class="toc-section-number">3.8</span>
+Index</a></li>
+</ul></li>
+<li><a href="#output-formats"><span class="toc-section-number">4</span>
+Output formats</a>
+<ul>
+<li><a href="#html"><span class="toc-section-number">4.1</span>
+HTML</a></li>
+<li><a href="#latex-pdf"><span class="toc-section-number">4.2</span>
+Latex / PDF</a></li>
+<li><a href="#epub"><span class="toc-section-number">4.3</span>
+ePub</a></li>
+<li><a href="#other-formats"><span class="toc-section-number">4.4</span>
+Other formats</a></li>
+</ul></li>
+<li><a href="#customization"><span class="toc-section-number">5</span>
+Customization</a>
+<ul>
+<li><a href="#themes"><span class="toc-section-number">5.1</span>
+Themes</a></li>
+<li><a href="#custom-css"><span class="toc-section-number">5.2</span>
+Custom CSS</a></li>
+</ul></li>
+<li><a href="#editing"><span class="toc-section-number">6</span>
+Editing</a>
+<ul>
+<li><a href="#preview"><span class="toc-section-number">6.1</span>
+Preview</a></li>
+<li><a href="#spell-check"><span class="toc-section-number">6.2</span>
+Spell check</a></li>
+</ul></li>
+<li><a href="#publishing"><span class="toc-section-number">7</span>
+Publishing</a>
+<ul>
+<li><a href="#github-pages"><span class="toc-section-number">7.1</span>
+GitHub Pages</a></li>
+<li><a href="#netlify"><span class="toc-section-number">7.2</span>
+Netlify</a></li>
+<li><a href="#gumroads"><span class="toc-section-number">7.3</span>
+Gumroads</a></li>
+</ul></li>
+<li><a href="#faq"><span class="toc-section-number">8</span>
+FAQ</a></li>
+<li><a href="#references"><span class="toc-section-number">9</span>
+References</a></li>
+</ul>
+</nav>
+<h1 class="unnumbered" id="the-bookless-book">The Bookless book</h1>
+<blockquote>
+<p>A book written with Bookless app</p>
+</blockquote>
+<h1 data-number="1" id="preface"><span
+class="header-section-number">1</span> Preface</h1>
+<p>I love reading books, especially beautiful books. Everytime I read a
+nicely formatted book, I told myself I would want to make a book that
+looks exactly like this one. But I’m yet to find an app that allows me
+to do that. So now I’m writting it myself and call it Bookless. And this
+is the first book written using Bookless, about how to use it to write a
+book just like this one.</p>
+<h1 data-number="2" id="introduction"><span
+class="header-section-number">2</span> Introduction</h1>
+<h2 data-number="2.1" id="motivation"><span
+class="header-section-number">2.1</span> Motivation</h2>
+<p>Writing a book is hard. It’s harder if we don’t have a powerful
+enough tool for it. Although it has some similarity with coding, writing
+is definitely not coding. I am a coder, I code mostly on an IDE. They
+are called IDE for a reason. It integrates many development tools into
+on powerful editor. I’m not needing that when writing. When writing
+something, I want to turn on the full focus most. Focus only to what I
+am thinking and writing at the moment. Nothing else. That the first
+thing I want when creating Bookless: the focus mode.</p>
+<p>There is rarely anyone who are writing a one-chapter book. I love to
+organize things for the sake of self sanity. So my book should be
+divided into chapters. That the second things Bookless must have: the
+chapters explorer. And as they say these days, plain text files are
+kings. Of course they are! Not every computers come with a pre-installed
+expensive Microsoft Word. But I assure you, every single one can edit a
+plain text file. So these chapters are, not very surprisingly, just
+plain text files on your computer.</p>
+<p>Every book should be beautifully formatted. That’s not even for
+debate. But not every one can do that. So Bookless should come with some
+nice-looking pre-defined templates so authors could really get started
+quickly.</p>
+<h2 data-number="2.2" id="get-started"><span
+class="header-section-number">2.2</span> Get started</h2>
+<p>Just download Bookless from its <a
+href="https://bookless.github.io">website</a>, and then install it to
+your computer.</p>
+<ul>
+<li>Open it</li>
+<li>Choose a folder to working on</li>
+<li>Create or editing an existing file</li>
+</ul>
+<p>Now you are just writing a brilliant beautiful book yourself!</p>
+<h2 data-number="2.3" id="usage"><span
+class="header-section-number">2.3</span> Usage</h2>
+<p>A typical book contain many chapters. They will be displayed on your
+left bar. Click the bookmark icon to expand it if it’s hidden. Click
+again to enter focus mode. You can double click on the top area to
+toggle the mode if you like.</p>
+<p>The content are automatically saved so you don’t have to. You should
+put your book on a backup system like Dropbox or iCloud to prevent any
+unwanted accident that may happen to your computer.</p>
+<h1 data-number="3" id="components"><span
+class="header-section-number">3</span> Components</h1>
+<h2 data-number="3.1" id="markdown-syntax"><span
+class="header-section-number">3.1</span> Markdown syntax</h2>
+<h2 data-number="3.2" id="markdown-extensions"><span
+class="header-section-number">3.2</span> Markdown extensions</h2>
+<h2 data-number="3.3" id="code-blocks"><span
+class="header-section-number">3.3</span> Code blocks</h2>
+<h2 data-number="3.4" id="figures"><span
+class="header-section-number">3.4</span> Figures</h2>
+<h2 data-number="3.5" id="tables"><span
+class="header-section-number">3.5</span> Tables</h2>
+<h2 data-number="3.6" id="cross-references"><span
+class="header-section-number">3.6</span> Cross-references</h2>
+<h2 data-number="3.7" id="citations"><span
+class="header-section-number">3.7</span> Citations</h2>
+<h2 data-number="3.8" id="index"><span
+class="header-section-number">3.8</span> Index</h2>
+<h1 data-number="4" id="output-formats"><span
+class="header-section-number">4</span> Output formats</h1>
+<h2 data-number="4.1" id="html"><span
+class="header-section-number">4.1</span> HTML</h2>
+<h2 data-number="4.2" id="latex-pdf"><span
+class="header-section-number">4.2</span> Latex / PDF</h2>
+<h2 data-number="4.3" id="epub"><span
+class="header-section-number">4.3</span> ePub</h2>
+<h2 data-number="4.4" id="other-formats"><span
+class="header-section-number">4.4</span> Other formats</h2>
+<h1 data-number="5" id="customization"><span
+class="header-section-number">5</span> Customization</h1>
+<h2 data-number="5.1" id="themes"><span
+class="header-section-number">5.1</span> Themes</h2>
+<h2 data-number="5.2" id="custom-css"><span
+class="header-section-number">5.2</span> Custom CSS</h2>
+<h1 data-number="6" id="editing"><span
+class="header-section-number">6</span> Editing</h1>
+<h2 data-number="6.1" id="preview"><span
+class="header-section-number">6.1</span> Preview</h2>
+<h2 data-number="6.2" id="spell-check"><span
+class="header-section-number">6.2</span> Spell check</h2>
+<h1 data-number="7" id="publishing"><span
+class="header-section-number">7</span> Publishing</h1>
+<h2 data-number="7.1" id="github-pages"><span
+class="header-section-number">7.1</span> GitHub Pages</h2>
+<h2 data-number="7.2" id="netlify"><span
+class="header-section-number">7.2</span> Netlify</h2>
+<h2 data-number="7.3" id="gumroads"><span
+class="header-section-number">7.3</span> Gumroads</h2>
+<h1 data-number="8" id="faq"><span
+class="header-section-number">8</span> FAQ</h1>
+<h1 data-number="9" id="references"><span
+class="header-section-number">9</span> References</h1>
+<ul>
+<li><a href="https://github.com/plainlab/bookless">bookless</a></li>
+<li><a href="https://bookdown.org/yihui/bookdown/">bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown">The bookdown
+book</a></li>
+</ul>
+</body>
+</html>
