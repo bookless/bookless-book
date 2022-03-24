@@ -1,11 +1,13 @@
 # References
 
-- [bookless][bookless]
-- [bookdown][bookdown]
-- [The bookdown book][bookdown-book]
+- [Pandoc manual][pandoc-manual]
+- [The Bookdown book][bookdown-book]
 
 
 
-[bookless]: https://github.com/plainlab/bookless
-[bookdown-book]: https://github.com/rstudio/bookdown
-[bookdown]: https://bookdown.org/yihui/bookdown/
+[bookless-source]: https://github.com/plainlab/bookless
+[bookless-book]: https://bookless.github.io
+[bookdown-source]: https://github.com/rstudio/bookdown
+[bookdown-book]: https://bookdown.org/yihui/bookdown/
+[pandoc-website]: https://pandoc.org
+[pandoc-manual]: https://pandoc.org/MANUAL.html

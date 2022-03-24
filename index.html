@@ -152,6 +152,69 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <!--[if lt IE 9]>
@@ -167,79 +230,96 @@
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#the-bookless-book">The Bookless book</a></li>
-<li><a href="#preface"><span class="toc-section-number">1</span>
-Preface</a></li>
-<li><a href="#introduction"><span class="toc-section-number">2</span>
+<li><a href="#preface">Preface</a></li>
+<li><a href="#introduction"><span class="toc-section-number">1</span>
 Introduction</a>
 <ul>
-<li><a href="#motivation"><span class="toc-section-number">2.1</span>
-Motivation</a></li>
-<li><a href="#get-started"><span class="toc-section-number">2.2</span>
-Get started</a></li>
-<li><a href="#usage"><span class="toc-section-number">2.3</span>
-Usage</a></li>
+<li><a href="#motivation"><span class="toc-section-number">1.1</span>
+Motivation</a>
+<ul>
+<li><a href="#distraction-free-mode"><span
+class="toc-section-number">1.1.1</span> Distraction-free mode</a></li>
+<li><a href="#chapters-explorer"><span
+class="toc-section-number">1.1.2</span> Chapters explorer</a></li>
+<li><a href="#local-plain-text-files"><span
+class="toc-section-number">1.1.3</span> Local plain text files</a></li>
+<li><a href="#nice-by-default"><span
+class="toc-section-number">1.1.4</span> Nice by default</a></li>
 </ul></li>
-<li><a href="#components"><span class="toc-section-number">3</span>
+<li><a href="#get-started"><span class="toc-section-number">1.2</span>
+Get started</a></li>
+<li><a href="#usage"><span class="toc-section-number">1.3</span>
+Usage</a>
+<ul>
+<li><a href="#chapters-explorer-1"><span
+class="toc-section-number">1.3.1</span> Chapters explorer</a></li>
+<li><a href="#chapter-content"><span
+class="toc-section-number">1.3.2</span> Chapter content</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#components"><span class="toc-section-number">2</span>
 Components</a>
 <ul>
 <li><a href="#markdown-syntax"><span
-class="toc-section-number">3.1</span> Markdown syntax</a></li>
-<li><a href="#markdown-extensions"><span
-class="toc-section-number">3.2</span> Markdown extensions</a></li>
-<li><a href="#code-blocks"><span class="toc-section-number">3.3</span>
-Code blocks</a></li>
-<li><a href="#figures"><span class="toc-section-number">3.4</span>
-Figures</a></li>
-<li><a href="#tables"><span class="toc-section-number">3.5</span>
-Tables</a></li>
-<li><a href="#cross-references"><span
-class="toc-section-number">3.6</span> Cross-references</a></li>
-<li><a href="#citations"><span class="toc-section-number">3.7</span>
-Citations</a></li>
-<li><a href="#index"><span class="toc-section-number">3.8</span>
-Index</a></li>
+class="toc-section-number">2.1</span> Markdown syntax</a>
+<ul>
+<li><a href="#inline-formatting"><span
+class="toc-section-number">2.1.1</span> Inline formatting</a></li>
+<li><a href="#block-level-elements"><span
+class="toc-section-number">2.1.2</span> Block-level elements</a></li>
+<li><a href="#math-expressions"><span
+class="toc-section-number">2.1.3</span> Math expressions</a></li>
 </ul></li>
-<li><a href="#output-formats"><span class="toc-section-number">4</span>
+<li><a href="#figures"><span class="toc-section-number">2.2</span>
+Figures</a></li>
+<li><a href="#tables"><span class="toc-section-number">2.3</span>
+Tables</a></li>
+</ul></li>
+<li><a href="#output-formats"><span class="toc-section-number">3</span>
 Output formats</a>
 <ul>
-<li><a href="#html"><span class="toc-section-number">4.1</span>
+<li><a href="#html"><span class="toc-section-number">3.1</span>
 HTML</a></li>
-<li><a href="#latex-pdf"><span class="toc-section-number">4.2</span>
-Latex / PDF</a></li>
-<li><a href="#epub"><span class="toc-section-number">4.3</span>
+<li><a href="#pdf"><span class="toc-section-number">3.2</span>
+PDF</a></li>
+<li><a href="#epub"><span class="toc-section-number">3.3</span>
 ePub</a></li>
-<li><a href="#other-formats"><span class="toc-section-number">4.4</span>
-Other formats</a></li>
 </ul></li>
-<li><a href="#customization"><span class="toc-section-number">5</span>
+<li><a href="#customization"><span class="toc-section-number">4</span>
 Customization</a>
 <ul>
-<li><a href="#themes"><span class="toc-section-number">5.1</span>
+<li><a href="#preferences"><span class="toc-section-number">4.1</span>
+Preferences</a></li>
+<li><a href="#themes"><span class="toc-section-number">4.2</span>
 Themes</a></li>
-<li><a href="#custom-css"><span class="toc-section-number">5.2</span>
+<li><a href="#custom-css"><span class="toc-section-number">4.3</span>
 Custom CSS</a></li>
 </ul></li>
-<li><a href="#editing"><span class="toc-section-number">6</span>
+<li><a href="#editing"><span class="toc-section-number">5</span>
 Editing</a>
 <ul>
-<li><a href="#preview"><span class="toc-section-number">6.1</span>
+<li><a href="#build-the-book"><span
+class="toc-section-number">5.1</span> Build the book</a></li>
+<li><a href="#preview"><span class="toc-section-number">5.2</span>
 Preview</a></li>
-<li><a href="#spell-check"><span class="toc-section-number">6.2</span>
+<li><a href="#spell-check"><span class="toc-section-number">5.3</span>
 Spell check</a></li>
 </ul></li>
-<li><a href="#publishing"><span class="toc-section-number">7</span>
+<li><a href="#publishing"><span class="toc-section-number">6</span>
 Publishing</a>
 <ul>
-<li><a href="#github-pages"><span class="toc-section-number">7.1</span>
+<li><a href="#github-pages"><span class="toc-section-number">6.1</span>
 GitHub Pages</a></li>
-<li><a href="#netlify"><span class="toc-section-number">7.2</span>
-Netlify</a></li>
-<li><a href="#gumroads"><span class="toc-section-number">7.3</span>
-Gumroads</a></li>
+<li><a href="#gumroad"><span class="toc-section-number">6.2</span>
+Gumroad</a></li>
 </ul></li>
-<li><a href="#faq"><span class="toc-section-number">8</span>
-FAQ</a></li>
-<li><a href="#references"><span class="toc-section-number">9</span>
+<li><a href="#faq">FAQ</a>
+<ul>
+<li><a href="#q-when-will-this-book-finish"><span
+class="toc-section-number">6.3</span> Q: When will this book
+finish?</a></li>
+</ul></li>
+<li><a href="#references"><span class="toc-section-number">7</span>
 References</a></li>
 </ul>
 </nav>
@@ -247,115 +327,417 @@ References</a></li>
 <blockquote>
 <p>A book written with Bookless app</p>
 </blockquote>
-<h1 data-number="1" id="preface"><span
-class="header-section-number">1</span> Preface</h1>
+<p><img src="assets/cFdZCJTzJxdhfweg34NvB.png" /> {width=300
+height=300}</p>
+<h1 class="unnumbered" id="preface">Preface</h1>
 <p>I love reading books, especially beautiful books. Everytime I read a
 nicely formatted book, I told myself I would want to make a book that
-looks exactly like this one. But I’m yet to find an app that allows me
-to do that. So now I’m writting it myself and call it Bookless. And this
-is the first book written using Bookless, about how to use it to write a
-book just like this one.</p>
-<h1 data-number="2" id="introduction"><span
-class="header-section-number">2</span> Introduction</h1>
-<h2 data-number="2.1" id="motivation"><span
-class="header-section-number">2.1</span> Motivation</h2>
+looks exactly like this. But I’m yet to find an app that allows me to do
+that. Alright, now I’m writting it myself and call it Bookless!</p>
+<p>This is the first book written using Bookless, about how to use it to
+write a book just like this one.</p>
+<p>Bookless is built on top of Pandoc. Hence many parts of this book
+will come from <a href="https://pandoc.org/MANUAL.html">Pandoc
+manual</a>. You should check them out if you want to build a writing
+app. Still, this book is about how to write a book, so let’s get
+started!</p>
+<h1 data-number="1" id="introduction"><span
+class="header-section-number">1</span> Introduction</h1>
+<h2 data-number="1.1" id="motivation"><span
+class="header-section-number">1.1</span> Motivation</h2>
 <p>Writing a book is hard. It’s harder if we don’t have a powerful
 enough tool for it. Although it has some similarity with coding, writing
 is definitely not coding. I am a coder, I code mostly on an IDE. They
 are called IDE for a reason. It integrates many development tools into
-on powerful editor. I’m not needing that when writing. When writing
-something, I want to turn on the full focus most. Focus only to what I
-am thinking and writing at the moment. Nothing else. That the first
-thing I want when creating Bookless: the focus mode.</p>
+on powerful editor. I’m not needing any of that when I’m start
+writing.</p>
+<h3 data-number="1.1.1" id="distraction-free-mode"><span
+class="header-section-number">1.1.1</span> Distraction-free mode</h3>
+<p>When onto writing something, I want to turn on the full focus mode.
+Concentrate only to what I am thinking and writing at the moment.
+Nothing else. That the first thing I want when creating Bookless: the
+distraction-free mode.</p>
+<h3 data-number="1.1.2" id="chapters-explorer"><span
+class="header-section-number">1.1.2</span> Chapters explorer</h3>
 <p>There is rarely anyone who are writing a one-chapter book. I love to
-organize things for the sake of self sanity. So my book should be
+organize things for the sake of self-sanity. So my book should be
 divided into chapters. That the second things Bookless must have: the
-chapters explorer. And as they say these days, plain text files are
-kings. Of course they are! Not every computers come with a pre-installed
-expensive Microsoft Word. But I assure you, every single one can edit a
-plain text file. So these chapters are, not very surprisingly, just
-plain text files on your computer.</p>
+chapters explorer.</p>
+<h3 data-number="1.1.3" id="local-plain-text-files"><span
+class="header-section-number">1.1.3</span> Local plain text files</h3>
+<p>Plain text files are kings. Of course they are! Not every computers
+come with a pre-installed expensive Microsoft Word. But I assure you,
+every single one can edit a plain text file! So these chapters are, not
+very surprisingly, just plain text files on your computer.</p>
+<h3 data-number="1.1.4" id="nice-by-default"><span
+class="header-section-number">1.1.4</span> Nice by default</h3>
 <p>Every book should be beautifully formatted. That’s not even for
 debate. But not every one can do that. So Bookless should come with some
-nice-looking pre-defined templates so authors could really get started
-quickly.</p>
-<h2 data-number="2.2" id="get-started"><span
-class="header-section-number">2.2</span> Get started</h2>
+nice-looking pre-defined templates so every authors can just really get
+started quickly.</p>
+<h2 data-number="1.2" id="get-started"><span
+class="header-section-number">1.2</span> Get started</h2>
 <p>Just download Bookless from its <a
-href="https://bookless.github.io">website</a>, and then install it to
-your computer.</p>
+href="https://github.com/plainlab/bookless">GitHub</a>, and then install
+it to your computer. Get started with 3 simple steps:</p>
 <ul>
-<li>Open it</li>
+<li>Open the Bookless app</li>
 <li>Choose a folder to working on</li>
-<li>Create or editing an existing file</li>
+<li>Create a new file and start writing</li>
 </ul>
-<p>Now you are just writing a brilliant beautiful book yourself!</p>
-<h2 data-number="2.3" id="usage"><span
-class="header-section-number">2.3</span> Usage</h2>
+<h2 data-number="1.3" id="usage"><span
+class="header-section-number">1.3</span> Usage</h2>
+<h3 data-number="1.3.1" id="chapters-explorer-1"><span
+class="header-section-number">1.3.1</span> Chapters explorer</h3>
 <p>A typical book contain many chapters. They will be displayed on your
 left bar. Click the bookmark icon to expand it if it’s hidden. Click
 again to enter focus mode. You can double click on the top area to
 toggle the mode if you like.</p>
+<p>All chapters belong to the book will be shown on the left. You can
+drag and drop to re-order them. Each chapter is a Markdown file on your
+choosen working folder. You can rename or delete them as you see fit.
+Just be aware that the delete action is permanent. There is no recycle
+bin for you to look for deleted files.</p>
+<h3 data-number="1.3.2" id="chapter-content"><span
+class="header-section-number">1.3.2</span> Chapter content</h3>
+<p>Each chapter file must start immediately with the chapter title using
+the first-level heading, e.g., <code># Chapter Title</code>. All
+Markdown files must be encoded in UTF-8, especially when they contain
+multi-byte characters such as Chinese, Japanese, and Korean. Here is an
+example (the bullets are the filenames, followed by the file
+content):</p>
+<ul>
+<li><p>preface.md</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preface {-}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>In this book, we will introduce an interesting</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>method.</span></code></pre></div></li>
+<li><p>intro.md</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>This chapter is an overview of the methods that</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>we propose to solve an **important problem**.</span></code></pre></div></li>
+<li><p>method.md</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Methods</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>We describe our methods in this chapter.</span></code></pre></div></li>
+<li><p>application.md</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Applications</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Some _significant_ applications are demonstrated</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>in this chapter.</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example one</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Example two</span></span></code></pre></div></li>
+<li><p>summary.md</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Final Words</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>We have finished a nice book.</span></code></pre></div></li>
+</ul>
 <p>The content are automatically saved so you don’t have to. You should
 put your book on a backup system like Dropbox or iCloud to prevent any
 unwanted accident that may happen to your computer.</p>
-<h1 data-number="3" id="components"><span
-class="header-section-number">3</span> Components</h1>
-<h2 data-number="3.1" id="markdown-syntax"><span
-class="header-section-number">3.1</span> Markdown syntax</h2>
-<h2 data-number="3.2" id="markdown-extensions"><span
-class="header-section-number">3.2</span> Markdown extensions</h2>
-<h2 data-number="3.3" id="code-blocks"><span
-class="header-section-number">3.3</span> Code blocks</h2>
-<h2 data-number="3.4" id="figures"><span
-class="header-section-number">3.4</span> Figures</h2>
-<h2 data-number="3.5" id="tables"><span
-class="header-section-number">3.5</span> Tables</h2>
-<h2 data-number="3.6" id="cross-references"><span
-class="header-section-number">3.6</span> Cross-references</h2>
-<h2 data-number="3.7" id="citations"><span
-class="header-section-number">3.7</span> Citations</h2>
-<h2 data-number="3.8" id="index"><span
-class="header-section-number">3.8</span> Index</h2>
-<h1 data-number="4" id="output-formats"><span
-class="header-section-number">4</span> Output formats</h1>
-<h2 data-number="4.1" id="html"><span
-class="header-section-number">4.1</span> HTML</h2>
-<h2 data-number="4.2" id="latex-pdf"><span
-class="header-section-number">4.2</span> Latex / PDF</h2>
-<h2 data-number="4.3" id="epub"><span
-class="header-section-number">4.3</span> ePub</h2>
-<h2 data-number="4.4" id="other-formats"><span
-class="header-section-number">4.4</span> Other formats</h2>
-<h1 data-number="5" id="customization"><span
-class="header-section-number">5</span> Customization</h1>
-<h2 data-number="5.1" id="themes"><span
-class="header-section-number">5.1</span> Themes</h2>
-<h2 data-number="5.2" id="custom-css"><span
-class="header-section-number">5.2</span> Custom CSS</h2>
-<h1 data-number="6" id="editing"><span
-class="header-section-number">6</span> Editing</h1>
-<h2 data-number="6.1" id="preview"><span
-class="header-section-number">6.1</span> Preview</h2>
-<h2 data-number="6.2" id="spell-check"><span
-class="header-section-number">6.2</span> Spell check</h2>
-<h1 data-number="7" id="publishing"><span
-class="header-section-number">7</span> Publishing</h1>
-<h2 data-number="7.1" id="github-pages"><span
-class="header-section-number">7.1</span> GitHub Pages</h2>
-<h2 data-number="7.2" id="netlify"><span
-class="header-section-number">7.2</span> Netlify</h2>
-<h2 data-number="7.3" id="gumroads"><span
-class="header-section-number">7.3</span> Gumroads</h2>
-<h1 data-number="8" id="faq"><span
-class="header-section-number">8</span> FAQ</h1>
-<h1 data-number="9" id="references"><span
-class="header-section-number">9</span> References</h1>
+<h1 data-number="2" id="components"><span
+class="header-section-number">2</span> Components</h1>
+<p>This chapter demonstrates the syntax of common components of a book
+written in <strong>Bookless</strong>. The approach is based on Pandoc,
+so we start with the syntax of Pandoc’s flavor of Markdown.</p>
+<h2 data-number="2.1" id="markdown-syntax"><span
+class="header-section-number">2.1</span> Markdown syntax</h2>
+<p>In this section, we give a very brief introduction to Pandoc’s
+Markdown. Readers who are familiar with Markdown can skip this section.
+The comprehensive syntax of Pandoc’s Markdown can be found on the <a
+href="https://pandoc.org">Pandoc website</a>.</p>
+<h3 data-number="2.1.1" id="inline-formatting"><span
+class="header-section-number">2.1.1</span> Inline formatting</h3>
+<p>You can make text <em>italic</em> by surrounding it with underscores
+or asterisks, e.g., <code>_text_</code> or <code>*text*</code>.</p>
+<p>For <strong>bold</strong> text, use two underscores
+(<code>__text__</code>) or asterisks (<code>**text**</code>).</p>
+<p>Text surrounded by <code>~</code> will be converted to a subscript
+(e.g., <code>H~2~SO~4~</code> renders H<sub>2</sub>SO<sub>4</sub>), and
+similarly, two carets (<code>^</code>) produce a superscript (e.g.,
+<code>Fe^2+^</code> renders Fe<sup>2+</sup>).</p>
+<p>To mark text as <code>inline code</code>, use a pair of backticks,
+e.g., <code>`code`</code>.<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Small caps can be produced by the HTML tag <code>span</code>, e.g.,
+<code>&lt;span style="font-variant:small-caps;"&gt;Small Caps&lt;/span&gt;</code>
+renders <span class="smallcaps">Small Caps</span>.</p>
+<p>Links are created using <code>[text](link)</code>, e.g.,
+<code>[RStudio](https://www.rstudio.com)</code>, and the syntax for
+images is similar: just add an exclamation mark, e.g.,
+<code>![alt text or image title](path/to/image)</code>.</p>
+<p>Footnotes are put inside the square brackets after a caret
+<code>^[]</code>, e.g., <code>^[This is a footnote.]</code>.</p>
+<h3 data-number="2.1.2" id="block-level-elements"><span
+class="header-section-number">2.1.2</span> Block-level elements</h3>
+<p>Section headers can be written after a number of pound signs,
+e.g.,</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># First-level header</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Second-level header</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### Third-level header</span></span></code></pre></div>
+<p>If you do not want a certain heading to be numbered, you can add
+<code>{-}</code> after the heading, e.g.,</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preface {-}</span></span></code></pre></div>
+<p>Unordered list items start with <code>*</code>, <code>-</code>, or
+<code>+</code>, and you can nest one list within another list by
+indenting the sub-list by four spaces, e.g.,</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>one item</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>one item</span></code></pre></div>
+<p>The output is:</p>
 <ul>
-<li><a href="https://github.com/plainlab/bookless">bookless</a></li>
-<li><a href="https://bookdown.org/yihui/bookdown/">bookdown</a></li>
-<li><a href="https://github.com/rstudio/bookdown">The bookdown
+<li>one item</li>
+<li>one item</li>
+<li>one item
+<ul>
+<li>one item</li>
+<li>one item</li>
+</ul></li>
+</ul>
+<p>Ordered list items start with numbers (the rule for nested lists is
+the same as above), e.g.,</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>the first item</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>the second item</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>the third item</span></code></pre></div>
+<p>The output does not look too much different with the Markdown
+source:</p>
+<ol type="1">
+<li>the first item</li>
+<li>the second item</li>
+<li>the third item</li>
+</ol>
+<p>Blockquotes are written after <code>&gt;</code>, e.g.,</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &quot;I thoroughly disapprove of duels. If a man should challenge me,</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  I would take him kindly and forgivingly by the hand and lead him</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">  to a quiet place and kill him.&quot;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; --- Mark Twain</span></span></code></pre></div>
+<p>The actual output (we customized the style for blockquotes in this
+book):</p>
+<blockquote>
+<p>“I thoroughly disapprove of duels. If a man should challenge me, I
+would take him kindly and forgivingly by the hand and lead him to a
+quiet place and kill him.”</p>
+<p>— Mark Twain</p>
+</blockquote>
+<p>Plain code blocks can be written after three or more backticks, and
+you can also indent the blocks by four spaces, e.g.,</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="in">This text is displayed verbatim / preformatted</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>Or indent by four spaces:</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="in">    This text is displayed verbatim / preformatted</span></span></code></pre></div>
+<h3 data-number="2.1.3" id="math-expressions"><span
+class="header-section-number">2.1.3</span> Math expressions</h3>
+<p>Inline LaTeX equations can be written in a pair of dollar signs using
+the LaTeX syntax, e.g.,
+<code>$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$</code> (actual output:
+<span class="math inline">$f(k)={n \choose k}p^{k}(1-p)^{n-k}$</span>);
+math expressions of the display style can be written in a pair of double
+dollar signs, e.g.,
+<code>$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$</code>, and the output
+looks like this:</p>
+<p><span
+class="math display">$$f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}$$</span></p>
+<p>You can also use math environments inside <code>$ $</code> or
+<code>$$ $$</code>, e.g.,</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{ccc}</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{11} &amp; x_{12} &amp; x_{13}</span><span class="sc">\\</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{21} &amp; x_{22} &amp; x_{23}</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">array</span>}<span class="ss">$$</span></span></code></pre></div>
+<p><span class="math display">$$\begin{array}{ccc}
+x_{11} &amp; x_{12} &amp; x_{13}\\
+x_{21} &amp; x_{22} &amp; x_{23}
+\end{array}$$</span></p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$X = </span><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}<span class="ss">1 &amp; x_{1}</span><span class="sc">\\</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; x_{2}</span><span class="sc">\\</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; x_{3}</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
+<p><span class="math display">$$X = \begin{bmatrix}1 &amp; x_{1}\\
+1 &amp; x_{2}\\
+1 &amp; x_{3}
+\end{bmatrix}$$</span></p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="sc">\Theta</span><span class="ss"> = </span><span class="kw">\begin</span>{<span class="ex">pmatrix</span>}<span class="sc">\alpha</span><span class="ss"> &amp; </span><span class="sc">\beta\\</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\gamma</span><span class="ss"> &amp; </span><span class="sc">\delta</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">pmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
+<p><span class="math display">$$\Theta = \begin{pmatrix}\alpha &amp;
+\beta\\
+\gamma &amp; \delta
+\end{pmatrix}$$</span></p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">vmatrix</span>}<span class="ss">a &amp; b</span><span class="sc">\\</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ss">c &amp; d</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">vmatrix</span>}<span class="ss">=ad-bc$$</span></span></code></pre></div>
+<p><span class="math display">$$\begin{vmatrix}a &amp; b\\
+c &amp; d
+\end{vmatrix}=ad-bc$$</span></p>
+<h2 data-number="2.2" id="figures"><span
+class="header-section-number">2.2</span> Figures</h2>
+<p>To be written…</p>
+<h2 data-number="2.3" id="tables"><span
+class="header-section-number">2.3</span> Tables</h2>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> A simple table in Markdown.</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a> Sepal.Length   Sepal.Width   Petal.Length   Petal.Width</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>-------------  ------------  -------------  ------------</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="in">          5.1           3.5            1.4           0.2</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="in">          4.9           3.0            1.4           0.2</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="in">          4.7           3.2            1.3           0.2</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="in">          4.6           3.1            1.5           0.2</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="in">          5.0           3.6            1.4           0.2</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="in">          5.4           3.9            1.7           0.4</span></span></code></pre></div>
+<p>Will generate this table:</p>
+<table>
+<caption>A simple table in Markdown.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Sepal.Length</th>
+<th style="text-align: right;">Sepal.Width</th>
+<th style="text-align: right;">Petal.Length</th>
+<th style="text-align: right;">Petal.Width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4.9</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">1.3</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">3.6</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.4</td>
+<td style="text-align: right;">3.9</td>
+<td style="text-align: right;">1.7</td>
+<td style="text-align: right;">0.4</td>
+</tr>
+</tbody>
+</table>
+<h1 data-number="3" id="output-formats"><span
+class="header-section-number">3</span> Output formats</h1>
+<p>Bookless supports HTML / PDF / ePub exports using embedded
+Pandoc.</p>
+<h2 data-number="3.1" id="html"><span
+class="header-section-number">3.1</span> HTML</h2>
+<p>You can export Bookless books into a single HTML file using the HTML
+export option.</p>
+<h2 data-number="3.2" id="pdf"><span
+class="header-section-number">3.2</span> PDF</h2>
+<p>You need to install Latex for your system before using this
+feature.</p>
+<h2 data-number="3.3" id="epub"><span
+class="header-section-number">3.3</span> ePub</h2>
+<p>To be written…</p>
+<h1 data-number="4" id="customization"><span
+class="header-section-number">4</span> Customization</h1>
+<h2 data-number="4.1" id="preferences"><span
+class="header-section-number">4.1</span> Preferences</h2>
+<p>Bookless allows you to customize these book preferences:</p>
+<ul>
+<li>Title</li>
+<li>Author</li>
+<li>Date</li>
+<li>Language</li>
+<li>Font family</li>
+<li>Font size</li>
+<li>Line height</li>
+</ul>
+<p>All configuration will be saved on <em>bookless.yaml</em> file. This
+is a valid Pandoc defaults file so you can use Pandoc command line to
+generate the book without Bookless.</p>
+<h2 data-number="4.2" id="themes"><span
+class="header-section-number">4.2</span> Themes</h2>
+<p>To be written…</p>
+<h2 data-number="4.3" id="custom-css"><span
+class="header-section-number">4.3</span> Custom CSS</h2>
+<p>To be written…</p>
+<h1 data-number="5" id="editing"><span
+class="header-section-number">5</span> Editing</h1>
+<h2 data-number="5.1" id="build-the-book"><span
+class="header-section-number">5.1</span> Build the book</h2>
+<p>You can export either the whole book or each chapter using Share
+icons.</p>
+<h2 data-number="5.2" id="preview"><span
+class="header-section-number">5.2</span> Preview</h2>
+<p>To be written…</p>
+<h2 data-number="5.3" id="spell-check"><span
+class="header-section-number">5.3</span> Spell check</h2>
+<p>To be written…</p>
+<h1 data-number="6" id="publishing"><span
+class="header-section-number">6</span> Publishing</h1>
+<p>To be written…</p>
+<h2 data-number="6.1" id="github-pages"><span
+class="header-section-number">6.1</span> GitHub Pages</h2>
+<h2 data-number="6.2" id="gumroad"><span
+class="header-section-number">6.2</span> Gumroad</h2>
+<h1 class="unnumbered" id="faq">FAQ</h1>
+<h2 data-number="6.3" id="q-when-will-this-book-finish"><span
+class="header-section-number">6.3</span> Q: When will this book
+finish?</h2>
+<p>A: It would never be.</p>
+<h1 data-number="7" id="references"><span
+class="header-section-number">7</span> References</h1>
+<ul>
+<li><a href="https://pandoc.org/MANUAL.html">Pandoc manual</a></li>
+<li><a href="https://bookdown.org/yihui/bookdown/">The Bookdown
 book</a></li>
 </ul>
+<section class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>To include literal backticks, use
+more backticks outside, e.g., you can use two backticks to preserve one
+backtick inside: <code>`` `code` ``</code>.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 </body>
 </html>

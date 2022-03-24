@@ -1,7 +1,7 @@
 # Publishing
 
+To be written...
+
 ## GitHub Pages
 
-## Netlify
-
-## Gumroads
+## Gumroad

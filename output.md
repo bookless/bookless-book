@@ -1,9 +1,15 @@
 # Output formats
 
+Bookless supports HTML / PDF / ePub exports using embedded Pandoc.
+
 ## HTML
 
-## Latex / PDF
+You can export Bookless books into a single HTML file using the HTML export option.
+
+## PDF
+
+You need to install Latex for your system before using this feature.
 
 ## ePub
 
-## Other formats
+To be written…
