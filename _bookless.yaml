@@ -1,0 +1,16 @@
+input-files:
+  - README.md
+  - preface.md
+  - intro.md
+  - components.md
+  - output.md
+  - customize.md
+  - editing.md
+  - publishing.md
+  - faq.md
+  - references.md
+variables:
+  title: The Bookless manual
+  author: PlainLab
+  date: '2022'
+  lang: en
