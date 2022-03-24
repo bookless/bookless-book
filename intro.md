@@ -2,7 +2,7 @@
 
 ## Motivation
 
-Writing a book is hard. It's harder if we don't have a powerful enough tool for it. Although it has some similarity with coding, writing is definitely not coding. I am a coder, I code mostly on an IDE. They are called IDE for a reason. It integrates many development tools into on powerful editor. I'm not needing any of that when I'm start writing.
+Writing a book is hard. It's harder if we don't have a powerful enough tool for it.
 
 ### Distraction-free mode
 
@@ -14,7 +14,7 @@ There is rarely anyone who are writing a one-chapter book. I love to organize th
 
 ### Local plain text files
 
-Plain text files are kings. Of course they are! Not every computers come with a pre-installed expensive Microsoft Word. But I assure you, every single one can edit a plain text file! So these chapters are, not very surprisingly, just plain text files on your computer.
+Plain text files are kings. Of course they are! Not every computers come with a pre-installed expensive Microsoft Word. But I assure you, every single one can edit a plain text file! So Bookless book's chapters are, not very surprisingly, just plain text files on your computer.
 
 ### Nice by default
 
@@ -34,7 +34,7 @@ Just download Bookless from its [GitHub][bookless-source], and then install it t
 
 A typical book contain many chapters. They will be displayed on your left bar. Click the bookmark icon to expand it if it's hidden. Click again to enter focus mode. You can double click on the top area to toggle the mode if you like.
 
-All chapters belong to the book will be shown on the left. You can drag and drop to re-order them. Each chapter is a Markdown file on your choosen working folder. You can rename or delete them as you see fit. Just be aware that the delete action is permanent. There is no recycle bin for you to look for deleted files.
+All chapters belong to the book will be shown on the left. You can drag and drop to re-order them. Each chapter is a Markdown file on your choosen working folder. You can rename or delete them as you see fit. Just be aware that the delete action is permanent, there is no recycle bin for you to look for deleted files.
 
 ### Chapter content
 

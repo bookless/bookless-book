@@ -215,8 +215,25 @@
     code span.va { color: #19177c; } /* Variable */
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
+  <script defer=""
+  src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -319,16 +336,23 @@ Gumroad</a></li>
 class="toc-section-number">6.3</span> Q: When will this book
 finish?</a></li>
 </ul></li>
-<li><a href="#references"><span class="toc-section-number">7</span>
-References</a></li>
+<li><a href="#references">References</a></li>
 </ul>
 </nav>
 <h1 class="unnumbered" id="the-bookless-book">The Bookless book</h1>
 <blockquote>
-<p>A book written with Bookless app</p>
+<p>A book written in Bookless app</p>
 </blockquote>
-<p><img src="assets/cFdZCJTzJxdhfweg34NvB.png" /> {width=300
-height=300}</p>
+<p><img src="assets/cFdZCJTzJxdhfweg34NvB.png" width="300"
+height="300" /></p>
+<ul>
+<li>HTML: <a href="https://bookless.github.io"
+class="uri">https://bookless.github.io</a></li>
+<li>PDF: <a href="https://bookless.github.io/book.pdf"
+class="uri">https://bookless.github.io/book.pdf</a></li>
+<li>ePub: <a href="https://bookless.github.io/epub.pdf"
+class="uri">https://bookless.github.io/epub.pdf</a></li>
+</ul>
 <h1 class="unnumbered" id="preface">Preface</h1>
 <p>I love reading books, especially beautiful books. Everytime I read a
 nicely formatted book, I told myself I would want to make a book that
@@ -336,21 +360,17 @@ looks exactly like this. But I’m yet to find an app that allows me to do
 that. Alright, now I’m writting it myself and call it Bookless!</p>
 <p>This is the first book written using Bookless, about how to use it to
 write a book just like this one.</p>
-<p>Bookless is built on top of Pandoc. Hence many parts of this book
-will come from <a href="https://pandoc.org/MANUAL.html">Pandoc
-manual</a>. You should check them out if you want to build a writing
-app. Still, this book is about how to write a book, so let’s get
-started!</p>
+<p>Bookless is built on top of <a href="https://pandoc.org">Pandoc</a>.
+Hence many parts of this book will come from <a
+href="https://pandoc.org/MANUAL.html">Pandoc manual</a>. You should
+check them out if you want to build a writing app. Still, this book is
+about how to write a book, so let’s get started!</p>
 <h1 data-number="1" id="introduction"><span
 class="header-section-number">1</span> Introduction</h1>
 <h2 data-number="1.1" id="motivation"><span
 class="header-section-number">1.1</span> Motivation</h2>
 <p>Writing a book is hard. It’s harder if we don’t have a powerful
-enough tool for it. Although it has some similarity with coding, writing
-is definitely not coding. I am a coder, I code mostly on an IDE. They
-are called IDE for a reason. It integrates many development tools into
-on powerful editor. I’m not needing any of that when I’m start
-writing.</p>
+enough tool for it.</p>
 <h3 data-number="1.1.1" id="distraction-free-mode"><span
 class="header-section-number">1.1.1</span> Distraction-free mode</h3>
 <p>When onto writing something, I want to turn on the full focus mode.
@@ -367,8 +387,8 @@ chapters explorer.</p>
 class="header-section-number">1.1.3</span> Local plain text files</h3>
 <p>Plain text files are kings. Of course they are! Not every computers
 come with a pre-installed expensive Microsoft Word. But I assure you,
-every single one can edit a plain text file! So these chapters are, not
-very surprisingly, just plain text files on your computer.</p>
+every single one can edit a plain text file! So Bookless book’s chapters
+are, not very surprisingly, just plain text files on your computer.</p>
 <h3 data-number="1.1.4" id="nice-by-default"><span
 class="header-section-number">1.1.4</span> Nice by default</h3>
 <p>Every book should be beautifully formatted. That’s not even for
@@ -396,7 +416,7 @@ toggle the mode if you like.</p>
 <p>All chapters belong to the book will be shown on the left. You can
 drag and drop to re-order them. Each chapter is a Markdown file on your
 choosen working folder. You can rename or delete them as you see fit.
-Just be aware that the delete action is permanent. There is no recycle
+Just be aware that the delete action is permanent, there is no recycle
 bin for you to look for deleted files.</p>
 <h3 data-number="1.3.2" id="chapter-content"><span
 class="header-section-number">1.3.2</span> Chapter content</h3>
@@ -552,13 +572,13 @@ class="header-section-number">2.1.3</span> Math expressions</h3>
 <p>Inline LaTeX equations can be written in a pair of dollar signs using
 the LaTeX syntax, e.g.,
 <code>$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$</code> (actual output:
-<span class="math inline">$f(k)={n \choose k}p^{k}(1-p)^{n-k}$</span>);
+<span class="math inline">f(k)={n \choose k}p^{k}(1-p)^{n-k}</span>);
 math expressions of the display style can be written in a pair of double
 dollar signs, e.g.,
 <code>$$f(k) = {n \choose k} p^{k} (1-p)^{n-k}$$</code>, and the output
 looks like this:</p>
 <p><span
-class="math display">$$f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}$$</span></p>
+class="math display">f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}</span></p>
 <p>You can also use math environments inside <code>$ $</code> or
 <code>$$ $$</code>, e.g.,</p>
 <div class="sourceCode" id="cb12"><pre
@@ -566,50 +586,60 @@ class="sourceCode latex"><code class="sourceCode latex"><span id="cb12-1"><a hre
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{11} &amp; x_{12} &amp; x_{13}</span><span class="sc">\\</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{21} &amp; x_{22} &amp; x_{23}</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">array</span>}<span class="ss">$$</span></span></code></pre></div>
-<p><span class="math display">$$\begin{array}{ccc}
+<p><span class="math display">\begin{array}{ccc}
 x_{11} &amp; x_{12} &amp; x_{13}\\
 x_{21} &amp; x_{22} &amp; x_{23}
-\end{array}$$</span></p>
+\end{array}</span></p>
 <div class="sourceCode" id="cb13"><pre
 class="sourceCode latex"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$X = </span><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}<span class="ss">1 &amp; x_{1}</span><span class="sc">\\</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; x_{2}</span><span class="sc">\\</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; x_{3}</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
-<p><span class="math display">$$X = \begin{bmatrix}1 &amp; x_{1}\\
+<p><span class="math display">X = \begin{bmatrix}1 &amp; x_{1}\\
 1 &amp; x_{2}\\
 1 &amp; x_{3}
-\end{bmatrix}$$</span></p>
+\end{bmatrix}</span></p>
 <div class="sourceCode" id="cb14"><pre
 class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="sc">\Theta</span><span class="ss"> = </span><span class="kw">\begin</span>{<span class="ex">pmatrix</span>}<span class="sc">\alpha</span><span class="ss"> &amp; </span><span class="sc">\beta\\</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\gamma</span><span class="ss"> &amp; </span><span class="sc">\delta</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">pmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
-<p><span class="math display">$$\Theta = \begin{pmatrix}\alpha &amp;
+<p><span class="math display">\Theta = \begin{pmatrix}\alpha &amp;
 \beta\\
 \gamma &amp; \delta
-\end{pmatrix}$$</span></p>
+\end{pmatrix}</span></p>
 <div class="sourceCode" id="cb15"><pre
 class="sourceCode latex"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">vmatrix</span>}<span class="ss">a &amp; b</span><span class="sc">\\</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ss">c &amp; d</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">vmatrix</span>}<span class="ss">=ad-bc$$</span></span></code></pre></div>
-<p><span class="math display">$$\begin{vmatrix}a &amp; b\\
+<p><span class="math display">\begin{vmatrix}a &amp; b\\
 c &amp; d
-\end{vmatrix}=ad-bc$$</span></p>
+\end{vmatrix}=ad-bc</span></p>
 <h2 data-number="2.2" id="figures"><span
 class="header-section-number">2.2</span> Figures</h2>
-<p>To be written…</p>
+<pre><code>![Bar demo](assets/CYYL-JyC-l4PQ-wVnw4Rg.png)</code></pre>
+<p>Generate this figure:</p>
+<figure>
+<img src="assets/CYYL-JyC-l4PQ-wVnw4Rg.png" alt="Bar demo" />
+<figcaption aria-hidden="true">Bar demo</figcaption>
+</figure>
+<p>Can you guess what Markdown source will generate this one?</p>
+<figure>
+<img src="assets/h-ktH6YHH9w015ilzgNfs.png" alt="Chart demo" />
+<figcaption aria-hidden="true">Chart demo</figcaption>
+</figure>
 <h2 data-number="2.3" id="tables"><span
 class="header-section-number">2.3</span> Tables</h2>
-<div class="sourceCode" id="cb16"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> A simple table in Markdown.</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a> Sepal.Length   Sepal.Width   Petal.Length   Petal.Width</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>-------------  ------------  -------------  ------------</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="in">          5.1           3.5            1.4           0.2</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="in">          4.9           3.0            1.4           0.2</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="in">          4.7           3.2            1.3           0.2</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="in">          4.6           3.1            1.5           0.2</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="in">          5.0           3.6            1.4           0.2</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="in">          5.4           3.9            1.7           0.4</span></span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> A simple table in Markdown.</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a> Sepal.Length   Sepal.Width   Petal.Length   Petal.Width</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>-------------  ------------  -------------  ------------</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="in">          5.1           3.5            1.4           0.2</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="in">          4.9           3.0            1.4           0.2</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="in">          4.7           3.2            1.3           0.2</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="in">          4.6           3.1            1.5           0.2</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="in">          5.0           3.6            1.4           0.2</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="in">          5.4           3.9            1.7           0.4</span></span></code></pre></div>
 <p>Will generate this table:</p>
 <table>
 <caption>A simple table in Markdown.</caption>
@@ -670,7 +700,7 @@ class="header-section-number">3.1</span> HTML</h2>
 export option.</p>
 <h2 data-number="3.2" id="pdf"><span
 class="header-section-number">3.2</span> PDF</h2>
-<p>You need to install Latex for your system before using this
+<p>You need to install Latex on your system before using this
 feature.</p>
 <h2 data-number="3.3" id="epub"><span
 class="header-section-number">3.3</span> ePub</h2>
@@ -722,8 +752,7 @@ class="header-section-number">6.2</span> Gumroad</h2>
 class="header-section-number">6.3</span> Q: When will this book
 finish?</h2>
 <p>A: It would never be.</p>
-<h1 data-number="7" id="references"><span
-class="header-section-number">7</span> References</h1>
+<h1 class="unnumbered" id="references">References</h1>
 <ul>
 <li><a href="https://pandoc.org/MANUAL.html">Pandoc manual</a></li>
 <li><a href="https://bookdown.org/yihui/bookdown/">The Bookdown

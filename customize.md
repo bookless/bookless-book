@@ -1,6 +1,5 @@
 # Customization
 
-
 ## Preferences
 
 Bookless allows you to customize these book preferences:

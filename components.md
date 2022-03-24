@@ -157,8 +157,17 @@ c & d
 
 ## Figures
 
-To be written...
+```
+![Bar demo](assets/CYYL-JyC-l4PQ-wVnw4Rg.png)
+```
 
+Generate this figure:
+
+![Bar demo](assets/CYYL-JyC-l4PQ-wVnw4Rg.png)
+
+Can you guess what Markdown source will generate this one?
+
+![Chart demo](assets/h-ktH6YHH9w015ilzgNfs.png)
 
 ## Tables
 

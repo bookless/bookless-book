@@ -8,7 +8,7 @@ You can export Bookless books into a single HTML file using the HTML export opti
 
 ## PDF
 
-You need to install Latex for your system before using this feature.
+You need to install Latex on your system before using this feature.
 
 ## ePub
 
