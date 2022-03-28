@@ -514,15 +514,21 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><
 <code>{-}</code> after the heading, e.g.,</p>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preface {-}</span></span></code></pre></div>
+<p>This may cause the chapter doesn’t have correct chapter name on the
+page header. You need to add a TeX command to an unnumbered header to
+fix this:</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preface {-}</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>\markboth{}{}</span></code></pre></div>
 <p>Unordered list items start with <code>*</code>, <code>-</code>, or
 <code>+</code>, and you can nest one list within another list by
 indenting the sub-list by four spaces, e.g.,</p>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>one item</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>one item</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>one item</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>one item</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>one item</span></code></pre></div>
 <p>The output is:</p>
 <ul>
 <li>one item</li>
@@ -535,10 +541,10 @@ class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><
 </ul>
 <p>Ordered list items start with numbers (the rule for nested lists is
 the same as above), e.g.,</p>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>the first item</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>the second item</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>the third item</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>the first item</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>the second item</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>the third item</span></code></pre></div>
 <p>The output does not look too much different with the Markdown
 source:</p>
 <ol type="1">
@@ -547,12 +553,12 @@ source:</p>
 <li>the third item</li>
 </ol>
 <p>Blockquotes are written after <code>&gt;</code>, e.g.,</p>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &quot;I thoroughly disapprove of duels. If a man should challenge me,</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  I would take him kindly and forgivingly by the hand and lead him</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">  to a quiet place and kill him.&quot;</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; --- Mark Twain</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; &quot;I thoroughly disapprove of duels. If a man should challenge me,</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="at">  I would take him kindly and forgivingly by the hand and lead him</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="at">  to a quiet place and kill him.&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; --- Mark Twain</span></span></code></pre></div>
 <p>The actual output (we customized the style for blockquotes in this
 book):</p>
 <blockquote>
@@ -563,14 +569,14 @@ quiet place and kill him.”</p>
 </blockquote>
 <p>Plain code blocks can be written after three or more backticks, and
 you can also indent the blocks by four spaces, e.g.,</p>
-<div class="sourceCode" id="cb11"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="in">This text is displayed verbatim / preformatted</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>Or indent by four spaces:</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="in">    This text is displayed verbatim / preformatted</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="in">This text is displayed verbatim / preformatted</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>Or indent by four spaces:</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="in">    This text is displayed verbatim / preformatted</span></span></code></pre></div>
 <h3 data-number="2.1.3" id="math-expressions"><span
 class="header-section-number">2.1.3</span> Math expressions</h3>
 <p>Inline LaTeX equations can be written in a pair of dollar signs using
@@ -585,36 +591,36 @@ looks like this:</p>
 class="math display">f\left(k\right)=\binom{n}{k}p^k\left(1-p\right)^{n-k}</span></p>
 <p>You can also use math environments inside <code>$ $</code> or
 <code>$$ $$</code>, e.g.,</p>
-<div class="sourceCode" id="cb12"><pre
-class="sourceCode latex"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{ccc}</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{11} &amp; x_{12} &amp; x_{13}</span><span class="sc">\\</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{21} &amp; x_{22} &amp; x_{23}</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">array</span>}<span class="ss">$$</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{ccc}</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{11} &amp; x_{12} &amp; x_{13}</span><span class="sc">\\</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{21} &amp; x_{22} &amp; x_{23}</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">array</span>}<span class="ss">$$</span></span></code></pre></div>
 <p><span class="math display">\begin{array}{ccc}
 x_{11} &amp; x_{12} &amp; x_{13}\\
 x_{21} &amp; x_{22} &amp; x_{23}
 \end{array}</span></p>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode latex"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$X = </span><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}<span class="ss">1 &amp; x_{1}</span><span class="sc">\\</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; x_{2}</span><span class="sc">\\</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; x_{3}</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$X = </span><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}<span class="ss">1 &amp; x_{1}</span><span class="sc">\\</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; x_{2}</span><span class="sc">\\</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; x_{3}</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
 <p><span class="math display">X = \begin{bmatrix}1 &amp; x_{1}\\
 1 &amp; x_{2}\\
 1 &amp; x_{3}
 \end{bmatrix}</span></p>
-<div class="sourceCode" id="cb14"><pre
-class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="sc">\Theta</span><span class="ss"> = </span><span class="kw">\begin</span>{<span class="ex">pmatrix</span>}<span class="sc">\alpha</span><span class="ss"> &amp; </span><span class="sc">\beta\\</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\gamma</span><span class="ss"> &amp; </span><span class="sc">\delta</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">pmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="sc">\Theta</span><span class="ss"> = </span><span class="kw">\begin</span>{<span class="ex">pmatrix</span>}<span class="sc">\alpha</span><span class="ss"> &amp; </span><span class="sc">\beta\\</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\gamma</span><span class="ss"> &amp; </span><span class="sc">\delta</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">pmatrix</span>}<span class="ss">$$</span></span></code></pre></div>
 <p><span class="math display">\Theta = \begin{pmatrix}\alpha &amp;
 \beta\\
 \gamma &amp; \delta
 \end{pmatrix}</span></p>
-<div class="sourceCode" id="cb15"><pre
-class="sourceCode latex"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">vmatrix</span>}<span class="ss">a &amp; b</span><span class="sc">\\</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ss">c &amp; d</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">vmatrix</span>}<span class="ss">=ad-bc$$</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode latex"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$</span><span class="kw">\begin</span>{<span class="ex">vmatrix</span>}<span class="ss">a &amp; b</span><span class="sc">\\</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ss">c &amp; d</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">vmatrix</span>}<span class="ss">=ad-bc$$</span></span></code></pre></div>
 <p><span class="math display">\begin{vmatrix}a &amp; b\\
 c &amp; d
 \end{vmatrix}=ad-bc</span></p>
@@ -633,64 +639,64 @@ class="header-section-number">2.2</span> Figures</h2>
 </figure>
 <h2 data-number="2.3" id="tables"><span
 class="header-section-number">2.3</span> Tables</h2>
-<div class="sourceCode" id="cb17"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> A simple table in Markdown.</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a> Sepal.Length   Sepal.Width   Petal.Length   Petal.Width</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>-------------  ------------  -------------  ------------</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="in">          5.1           3.5            1.4           0.2</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="in">          4.9           3.0            1.4           0.2</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="in">          4.7           3.2            1.3           0.2</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="in">          4.6           3.1            1.5           0.2</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="in">          5.0           3.6            1.4           0.2</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="in">          5.4           3.9            1.7           0.4</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="an">Table:</span><span class="co"> A simple table in Markdown.</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>|Sepal.Length| Sepal.Width | Petal.Length | Petal.Width |</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>|------------|-------------|--------------|-------------|</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>|        5.1 |          3.5|           1.4|          0.2|</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>|        4.9 |          3.0|           1.4|          0.2|</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>|        4.7 |          3.2|           1.3|          0.2|</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>|        4.6 |          3.1|           1.5|          0.2|</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>|        5.0 |          3.6|           1.4|          0.2|</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>|        5.4 |          3.9|           1.7|          0.4|</span></code></pre></div>
 <p>Will generate this table:</p>
 <table>
 <caption>A simple table in Markdown.</caption>
 <thead>
 <tr class="header">
-<th style="text-align: right;">Sepal.Length</th>
-<th style="text-align: right;">Sepal.Width</th>
-<th style="text-align: right;">Petal.Length</th>
-<th style="text-align: right;">Petal.Width</th>
+<th>Sepal.Length</th>
+<th>Sepal.Width</th>
+<th>Petal.Length</th>
+<th>Petal.Width</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">5.1</td>
-<td style="text-align: right;">3.5</td>
-<td style="text-align: right;">1.4</td>
-<td style="text-align: right;">0.2</td>
+<td>5.1</td>
+<td>3.5</td>
+<td>1.4</td>
+<td>0.2</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4.9</td>
-<td style="text-align: right;">3.0</td>
-<td style="text-align: right;">1.4</td>
-<td style="text-align: right;">0.2</td>
+<td>4.9</td>
+<td>3.0</td>
+<td>1.4</td>
+<td>0.2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">4.7</td>
-<td style="text-align: right;">3.2</td>
-<td style="text-align: right;">1.3</td>
-<td style="text-align: right;">0.2</td>
+<td>4.7</td>
+<td>3.2</td>
+<td>1.3</td>
+<td>0.2</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">4.6</td>
-<td style="text-align: right;">3.1</td>
-<td style="text-align: right;">1.5</td>
-<td style="text-align: right;">0.2</td>
+<td>4.6</td>
+<td>3.1</td>
+<td>1.5</td>
+<td>0.2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">5.0</td>
-<td style="text-align: right;">3.6</td>
-<td style="text-align: right;">1.4</td>
-<td style="text-align: right;">0.2</td>
+<td>5.0</td>
+<td>3.6</td>
+<td>1.4</td>
+<td>0.2</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">5.4</td>
-<td style="text-align: right;">3.9</td>
-<td style="text-align: right;">1.7</td>
-<td style="text-align: right;">0.4</td>
+<td>5.4</td>
+<td>3.9</td>
+<td>1.7</td>
+<td>0.4</td>
 </tr>
 </tbody>
 </table>

@@ -1,4 +1,5 @@
 # References {-}
+\markboth{}{}
 
 - [Pandoc manual][pandoc-manual]
 - [The Bookdown book][bookdown-book]

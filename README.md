@@ -1,8 +1,8 @@
 # The Bookless book {-}
+\markboth{}{}
 
 
 ![](assets/cFdZCJTzJxdhfweg34NvB.png){width=300 height=300}
-
 
 ## A book written in Bookless app {-}
 

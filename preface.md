@@ -1,4 +1,6 @@
 # Preface {-}
+\markboth{}{}
+
 
 I love reading books, especially beautiful books. Everytime I read a nicely formatted book, I told myself I would want to make a book that looks exactly like this. But I'm yet to find an app that allows me to do that. Alright, now I'm writting it myself and call it Bookless!
 

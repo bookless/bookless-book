@@ -40,6 +40,13 @@ If you do not want a certain heading to be numbered, you can add `{-}` after the
 # Preface {-}
 ```
 
+This may cause the chapter doesn't have correct chapter name on the page header. You need to add a TeX command to an unnumbered header to fix this:
+
+```markdown
+# Preface {-}
+\markboth{}{}
+```
+
 Unordered list items start with `*`, `-`, or `+`, and you can nest one list within another list by indenting the sub-list by four spaces, e.g.,
 
 ```markdown
@@ -174,14 +181,14 @@ Can you guess what Markdown source will generate this one?
 ```markdown
 Table: A simple table in Markdown.
 
- Sepal.Length   Sepal.Width   Petal.Length   Petal.Width
--------------  ------------  -------------  ------------
-          5.1           3.5            1.4           0.2
-          4.9           3.0            1.4           0.2
-          4.7           3.2            1.3           0.2
-          4.6           3.1            1.5           0.2
-          5.0           3.6            1.4           0.2
-          5.4           3.9            1.7           0.4
+|Sepal.Length| Sepal.Width | Petal.Length | Petal.Width |
+|------------|-------------|--------------|-------------|
+|        5.1 |          3.5|           1.4|          0.2|
+|        4.9 |          3.0|           1.4|          0.2|
+|        4.7 |          3.2|           1.3|          0.2|
+|        4.6 |          3.1|           1.5|          0.2|
+|        5.0 |          3.6|           1.4|          0.2|
+|        5.4 |          3.9|           1.7|          0.4|
 ```
 
 Will generate this table:
@@ -189,11 +196,11 @@ Will generate this table:
 
 Table: A simple table in Markdown.
 
- Sepal.Length   Sepal.Width   Petal.Length   Petal.Width
--------------  ------------  -------------  ------------
-          5.1           3.5            1.4           0.2
-          4.9           3.0            1.4           0.2
-          4.7           3.2            1.3           0.2
-          4.6           3.1            1.5           0.2
-          5.0           3.6            1.4           0.2
-          5.4           3.9            1.7           0.4
+|Sepal.Length| Sepal.Width | Petal.Length | Petal.Width |
+|------------|-------------|--------------|-------------|
+|        5.1 |          3.5|           1.4|          0.2|
+|        4.9 |          3.0|           1.4|          0.2|
+|        4.7 |          3.2|           1.3|          0.2|
+|        4.6 |          3.1|           1.5|          0.2|
+|        5.0 |          3.6|           1.4|          0.2|
+|        5.4 |          3.9|           1.7|          0.4|

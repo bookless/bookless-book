@@ -1,4 +1,5 @@
 # FAQ {-}
+\markboth{}{}
 
 ## Q: When will this book finish? {-}
 
