@@ -165,16 +165,21 @@ c & d
 ## Figures
 
 ```
-![Bar demo](assets/CYYL-JyC-l4PQ-wVnw4Rg.png)
+![Bar demo](assets/CYYL-JyC-l4PQ-wVnw4Rg.png)\
 ```
 
-Generate this figure:
+Generate this image:
 
-![Bar demo](assets/CYYL-JyC-l4PQ-wVnw4Rg.png)
+![Bar demo](assets/CYYL-JyC-l4PQ-wVnw4Rg.png)\
 
-Can you guess what Markdown source will generate this one?
+If you want to create a figure, remove the last backslash:
+
+```
+![Chart demo](assets/h-ktH6YHH9w015ilzgNfs.png)
+```
 
 ![Chart demo](assets/h-ktH6YHH9w015ilzgNfs.png)
+
 
 ## Tables
 
@@ -191,7 +196,7 @@ Table: A simple table in Markdown.
 |        5.4 |          3.9|           1.7|          0.4|
 ```
 
-Will generate this table:
+Will generate below table.
 
 
 Table: A simple table in Markdown.

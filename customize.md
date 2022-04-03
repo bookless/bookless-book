@@ -12,7 +12,7 @@ Bookless allows you to customize these book preferences:
 - Font size
 - Line height
 
-All configuration will be saved on _bookless.yaml_ file. This is a valid Pandoc defaults file so you can use Pandoc command line to generate the book without Bookless.
+All configuration will be saved on _\_bookless.yaml_ file. This is a valid Pandoc defaults file so you can use Pandoc command line to generate the book without Bookless.
 
 ## Themes
 
