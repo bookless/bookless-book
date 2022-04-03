@@ -16,16 +16,12 @@ There is rarely anyone who are writing a one-chapter book. I love to organize th
 
 Plain text files are kings. Of course they are! Not every computers come with a pre-installed expensive Microsoft Word. But I assure you, every single one can edit a plain text file! So Bookless book's chapters are, not very surprisingly, just plain text files on your computer.
 
-### Nice by default
-
-Every book should be beautifully formatted. That's not even for debate. But not every one can do that. So Bookless should come with some nice-looking pre-defined templates so every authors can just really get started quickly.
-
 ## Get started
 
 Just download Bookless from its [GitHub][bookless-source], and then install it to your computer. Get started with 3 simple steps:
 
 - Open the Bookless app
-- Choose a folder to working on
+- Choose a folder to work on
 - Create a new file and start writing
 
 ## Usage

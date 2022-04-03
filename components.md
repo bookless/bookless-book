@@ -196,7 +196,7 @@ Table: A simple table in Markdown.
 |        5.4 |          3.9|           1.7|          0.4|
 ```
 
-Will generate below table.
+Will generate the table below.
 
 
 Table: A simple table in Markdown.
